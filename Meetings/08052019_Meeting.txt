@@ -1,0 +1,19 @@
+Meeting - 8/4/2019
+
+Selenium scraper 99% complete
+
+-About page:
+	-Include retrospective. Talk about what the experience of working on the project was like.
+	 Discuss what the scraper does and how it performs.
+
+-Begin work on HTMLAgilityPack scraper
+	-New console app project
+
+-Pull data from NASDAQ
+-No login required for this scraper
+-Create new table to store new NASDAQ scrape data into database.
+
+Today's items:
+
+-Begin building scraper using HTMLAgilityPack
+-Create new table for database to store new scrape data
