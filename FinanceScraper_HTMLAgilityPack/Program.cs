@@ -12,9 +12,17 @@ namespace FinanceScraper_HTMLAgilityPack
         static void Main(string[] args)
         {
             HtmlWeb web = new HtmlWeb();
-            HtmlDocument document = web.Load("https://www.nasdaq.com/markets/indices/major-indices.aspx");
+            string url = "https://www.nasdaq.com/markets/indices/major-indices.aspx";
+            HtmlDocument document = web.Load(url);
 
-            HtmlNode tableNode = document.DocumentNode.SelectSingleNode("//table[@class='USMN_MarketIndices']");
+            HtmlNodeCollection tableNode = document.DocumentNode.SelectNodes("//*[@id=\"left-column-div\"]/div[4]/table/tr");
+            foreach(HtmlNode node in tableNode)
+            {
+                Console.WriteLine(node.InnerText);
+            }
+
+            Console.ReadLine();
+            /*
             HtmlNode[] trNodes = tableNode.SelectNodes("//tr").ToArray();
 
             HtmlNode[] cells = tableNode.SelectNodes(".//td").ToArray();
@@ -37,7 +45,7 @@ namespace FinanceScraper_HTMLAgilityPack
                 }
                 
             }
-
+            */
 
             /*
             for(var item = 0; item < 11; item++)
@@ -59,7 +67,7 @@ namespace FinanceScraper_HTMLAgilityPack
             }
             */
 
-            Console.ReadLine();
+            
         }
     }
 }
