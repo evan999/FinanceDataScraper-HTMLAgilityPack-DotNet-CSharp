@@ -1,0 +1,8 @@
+Meeting - 8/8/2019
+
+Items to complete:
+
+-Build table and model
+-Update scraper code to store values of each cell for each field.
+-Display data in console.
+-Store data in NasdaqStocks table.

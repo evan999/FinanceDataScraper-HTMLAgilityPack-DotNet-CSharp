@@ -11,15 +11,7 @@ namespace FinanceScraper_HTMLAgilityPack
     {
         static void Main(string[] args)
         {
-            HtmlWeb web = new HtmlWeb();
-            string url = "https://www.nasdaq.com/markets/indices/major-indices.aspx";
-            HtmlDocument document = web.Load(url);
-
-            HtmlNodeCollection tableNode = document.DocumentNode.SelectNodes("//*[@id=\"left-column-div\"]/div[4]/table/tr");
-            foreach(HtmlNode node in tableNode)
-            {
-                Console.WriteLine(node.InnerText);
-            }
+            Scraper.RunScraper();
 
             Console.ReadLine();
             /*
